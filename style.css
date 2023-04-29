@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, black, #220033);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-box {
+  width: clamp(150px, 30vw, 300px);
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
