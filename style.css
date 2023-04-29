@@ -19,14 +19,19 @@ ul {
 }
 
 .carousel-box {
-  --progress: ;
+  --shift-x: calc(80% * var(--progress));
+  --shift-y: calc(40% * var(--progress));
+  --rotate: calc(30deg * var(--progress));
+
   width: clamp(150px, 30vw, 300px);
   aspect-ratio: 3 / 4;
   box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  transform: translate(-50%, -50%) translate(var(--shift-x), var(--shift-y))
+    rotate(var(--rotate));
 
   display: grid;
   grid-template-columns: 1fr;

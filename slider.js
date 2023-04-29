@@ -1,5 +1,8 @@
 const sliderItems = Array.from(document.querySelectorAll(".carousel-item"));
+const shownItemIndex = 3;
 
-sliderItems.forEach(function (sliderItems, index) {
-  sliderItems.style.setProperty("----progress", index);
+console.log({ sliderItems, shownItemIndex });
+
+sliderItems.forEach(function (sliderItem, index) {
+  sliderItem.style.setProperty("--progress", index - shownItemIndex);
 });
